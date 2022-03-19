@@ -18,6 +18,6 @@ describe('tests of ListElement component ', () => {
             propsData: { todo }
         })
 
-        expect(wrapper.isVueInstance).toBeTruthy();
+        expect(wrapper.exists()).toBeTruthy();
     });
 })
