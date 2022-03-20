@@ -44,9 +44,7 @@ describe('Todo Api', () => {
             })
             let theBaseURL = provider.mockService.baseUrl
             let response = await getTodos(theBaseURL);
-            console.log("responsee", response);
-            // const myJSON = JSON.stringify(response.data);
-            // expect(response.data).toEqual(expectedResponse);
+            expect(response.data).toEqual(expectedResponse);
 
         })
     })
@@ -77,7 +75,6 @@ describe('Todo Api', () => {
             })
             let theBaseURL = provider.mockService.baseUrl
             let response = await createTodo(theBaseURL, requestBody);
-            console.log(response);
             const myJSON = JSON.stringify(response.statusText);
             expect(myJSON).toEqual("\"Created \"");
         })
