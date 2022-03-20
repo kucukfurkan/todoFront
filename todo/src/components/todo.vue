@@ -57,7 +57,7 @@ export default {
           console.log(response);
         })
         .catch((error) => console.log(error));
-      location.reload();
+      //location.reload();
       this.textInput = "";
     },
 

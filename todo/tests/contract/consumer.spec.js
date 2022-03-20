@@ -8,7 +8,7 @@ import "babel-polyfill";
 
 jest.setTimeout(60000);
 
-let baseURL = "http://localhost:8086/";
+//let baseURL = "http://localhost:8086/";
 
 describe('Todo Api', () => {
     const provider = new Pact({
