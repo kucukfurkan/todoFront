@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
+    "test:unit": "vue-cli-service test:unit tests/unit",
     "lint": "vue-cli-service lint",
     "test:consumer": "jest tests/contract",
     "pact:publish": "pact-broker publish pacts/todo-todo-backend.json --consumer-app-version='$(npx @pact-foundation/absolute-version)' --auto-detect-version-properties --broker-base-url=https://furkankucuk.pactflow.io/ --broker-token=HYMZJAIH-5wJvcZqktHKvw"
