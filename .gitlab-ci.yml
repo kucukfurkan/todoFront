@@ -39,7 +39,8 @@ unit-test-job:   # This job runs in the test stage.
     - npm run test:unit
 
 lint-test-job:   # This job also runs in the test stage.
-  stage: test    # It can run at the same time as unit-test-job (in parallel).
+  stage: test
+  image: node:lts     # It can run at the same time as unit-test-job (in parallel).
   script:
     - echo "Linting code... This will take about 10 seconds."
     - sleep 3
