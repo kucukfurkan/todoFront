@@ -29,7 +29,7 @@ build-job:       # This job runs in the build stage, which runs first.
     - npm run build
     - echo "Compile complete."
 
-acceptance-test-job:
+acceptance_test:
   stage: accaptance_test
   trigger:
     project: furkan.moda/todo-acceptance
