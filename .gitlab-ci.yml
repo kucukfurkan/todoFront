@@ -15,6 +15,7 @@
 
 stages:          # List of stages for jobs, and their order of execution
   - build
+  - acceptance_test
   - test
   - deploy
 
@@ -27,6 +28,13 @@ build-job:       # This job runs in the build stage, which runs first.
     - npm install
     - npm run build
     - echo "Compile complete."
+
+acceptance-test-job:
+  stage: accaptance_test
+  trigger:
+    project: furkan.moda/todo-acceptance
+    strategy: depend
+
 
 unit-test-job:   # This job runs in the test stage.
   stage: test 
