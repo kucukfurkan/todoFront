@@ -32,7 +32,7 @@ build-job:       # This job runs in the build stage, which runs first.
 acceptance-job:
   stage: acceptance
   trigger:
-    project: furkan.moda/todo-acceptance
+    project: furkan.moda/todo-acceptance-test
     strategy: depend
 
 
