@@ -7,6 +7,40 @@
   },
   "interactions": [
     {
+      "description": "request for geting todos",
+      "providerState": "there are already exists todos",
+      "request": {
+        "method": "GET",
+        "path": "/GetTodoElements",
+        "headers": {
+          "Accept": "application/json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": [
+          {
+            "_id": "62234346c2a65768f2c03ca5",
+            "status": 0,
+            "text": "drink water"
+          },
+          {
+            "_id": "6225bfaec2a65768f2c03ca6",
+            "status": 0,
+            "text": "bla bla"
+          }
+        ],
+        "matchingRules": {
+          "$.body": {
+            "match": "type"
+          }
+        }
+      }
+    },
+    {
       "description": "create item request",
       "providerState": "a todo item is created",
       "request": {

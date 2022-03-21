@@ -12,11 +12,18 @@ describe('Adding a new todo test ', () => {
 
     it('Is has an input place for writing new todo', async() => {
         const wrapper = shallowMount(Mainpage)
+        for (let index = 0; index < 200; index++) {
+            await flushPromises()
+          }
         expect(wrapper.find("#inputPlace").exists()).toBeTruthy()
+        
     });
 
     it('Is has a button for adding new todo', async() => {
         const wrapper = shallowMount(Mainpage)
+        for (let index = 0; index < 200; index++) {
+            await flushPromises()
+          }
         expect(wrapper.find("#buttonAdd").exists()).toBeTruthy()
     });
 
@@ -25,10 +32,12 @@ describe('Adding a new todo test ', () => {
         const inputText = "buy some milk";
         const textInput = wrapper.find("#inputPlace");
         await textInput.setValue(inputText);
+        
         expect(textInput.element.value).toEqual(inputText);
         await flushPromises;
-
-
+        for (let index = 0; index < 200; index++) {
+            await flushPromises()
+          }
         //const AddButton = jest.fn();
         // wrapper.setMethods({
         //     AddTodoElement: AddButton
@@ -38,21 +47,24 @@ describe('Adding a new todo test ', () => {
        // expect(AddButton).toHaveBeenCalled();
     });
 
-    it("does not render a Child component", async() => { 
+    it("does render a Child component", async() => { 
         const wrapper = mount(Mainpage)
          //  const wrapper = shallowMount(Mainpage)
         const inputText = "buy some milk";
         const textInput = wrapper.find("#inputPlace");
         await textInput.setValue(inputText);
+        for (let index = 0; index < 200; index++) {
+            await flushPromises()
+          }
         expect(textInput.element.value).toEqual(inputText);
-
+      
         //const AddButton = jest.fn();
         // wrapper.setMethods({
         //     AddTodoElement: AddButton
         // })
         wrapper.find('#buttonAdd').trigger('click')
 
-        await expect(wrapper.findComponent(ListElement).exists()).toBe(false)
+        await expect(wrapper.findComponent(ListElement).exists()).toBe(true)
     })
 
 })
