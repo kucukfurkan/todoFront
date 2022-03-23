@@ -47,7 +47,7 @@ describe('Adding a new todo test ', () => {
        // expect(AddButton).toHaveBeenCalled();
     });
 
-    it("does render a Child component", async() => { 
+    it("does not render a Child component", async() => { 
         const wrapper = mount(Mainpage)
          //  const wrapper = shallowMount(Mainpage)
         const inputText = "buy some milk";
@@ -64,7 +64,7 @@ describe('Adding a new todo test ', () => {
         // })
         wrapper.find('#buttonAdd').trigger('click')
 
-        await expect(wrapper.findComponent(ListElement).exists()).toBe(true)
+        await expect(wrapper.findComponent(ListElement).exists()).toBe(false)
     })
 
 })
