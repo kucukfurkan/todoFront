@@ -2,7 +2,7 @@
   <div id="listelement" class="background-todoElement">
     <div class="flex bg-grey-light w-full h-auto p-2 mt-4 rounded-lg gap-x-5">
       <p href="#"
-        id="" class="w-5/6 font-sans font-light text-2xl text-center bg-white pt-1 shadow-md rounded-lg"
+        id="todoElement" class="w-5/6 font-sans font-light text-2xl text-center bg-white pt-1 shadow-md rounded-lg"
       >
         {{ todo.text }}
       </p>

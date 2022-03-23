@@ -15,8 +15,8 @@
 
 stages:          # List of stages for jobs, and their order of execution
   - build
-  - acceptance
   - test
+  - acceptance
   - deploy
 
 build-job:       # This job runs in the build stage, which runs first.
@@ -28,13 +28,6 @@ build-job:       # This job runs in the build stage, which runs first.
     - npm install
     - npm run build
     - echo "Compile complete."
-
-acceptance-job:
-  stage: acceptance
-  trigger:
-    project: furkan.moda/todo-acceptance-test
-    strategy: depend
-
 
 unit-test-job:   # This job runs in the test stage.
   stage: test 
@@ -56,6 +49,12 @@ lint-test-job:   # This job also runs in the test stage.
     - npm install
     - npm run lint
     - echo "No lint issues found."
+
+acceptance-job:
+  stage: acceptance
+  trigger:
+    project: furkan.moda/todo-acceptance-test
+    strategy: depend
 
 deploy-job:      # This job runs in the deploy stage.
   stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.

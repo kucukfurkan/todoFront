@@ -1,19 +1,11 @@
-I, [2022-03-20T17:52:04.084723 #57878]  INFO -- : Registered expected interaction GET /GetTodoElements
-W, [2022-03-20T17:52:04.091493 #57878]  WARN -- : Verifying - actual interactions do not match expected interactions. 
-Missing requests:
-	GET /GetTodoElements
-
-
-
-W, [2022-03-20T17:52:04.091557 #57878]  WARN -- : Missing requests:
-	GET /GetTodoElements
-
-
-
-I, [2022-03-20T17:52:04.101869 #57878]  INFO -- : Cleared interactions
-I, [2022-03-20T17:52:04.117507 #57878]  INFO -- : Registered expected interaction POST /CreateTodo
-I, [2022-03-20T17:52:04.119174 #57878]  INFO -- : Received request POST /CreateTodo
-I, [2022-03-20T17:52:04.119588 #57878]  INFO -- : Found matching response for POST /CreateTodo
-I, [2022-03-20T17:52:04.131114 #57878]  INFO -- : Verifying - interactions matched
-I, [2022-03-20T17:52:04.134516 #57878]  INFO -- : Cleared interactions
-I, [2022-03-20T17:52:04.138667 #57878]  INFO -- : Writing pact for todo-backend to /Users/furkan.kucuk/Desktop/todo-frontend/todo/pacts/todo-todo-backend.json
+I, [2022-03-22T09:49:19.196169 #72692]  INFO -- : Received request GET /GetTodoElements
+I, [2022-03-22T09:49:19.197640 #72692]  INFO -- : Registered expected interaction GET /GetTodoElements
+I, [2022-03-22T09:49:19.198125 #72692]  INFO -- : Found matching response for GET /GetTodoElements
+I, [2022-03-22T09:49:19.213909 #72692]  INFO -- : Verifying - interactions matched
+I, [2022-03-22T09:49:19.218259 #72692]  INFO -- : Cleared interactions
+I, [2022-03-22T09:49:19.232573 #72692]  INFO -- : Received request POST /CreateTodo
+I, [2022-03-22T09:49:19.233824 #72692]  INFO -- : Registered expected interaction POST /CreateTodo
+I, [2022-03-22T09:49:19.234080 #72692]  INFO -- : Found matching response for POST /CreateTodo
+I, [2022-03-22T09:49:19.239790 #72692]  INFO -- : Verifying - interactions matched
+I, [2022-03-22T09:49:19.244109 #72692]  INFO -- : Cleared interactions
+I, [2022-03-22T09:49:19.248725 #72692]  INFO -- : Writing pact for todo-backend to /Users/furkan.kucuk/Desktop/todo-frontend/todo/pacts/todo-todo-backend.json
