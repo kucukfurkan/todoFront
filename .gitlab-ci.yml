@@ -56,7 +56,7 @@ stages:          # List of stages for jobs, and their order of execution
 #     project: furkan.moda/todo-acceptance-test
 #     strategy: depend
 
-image: node:alphine
+image: node:lts
 cache: 
   paths:
     - todo/node_modules/
