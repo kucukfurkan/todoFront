@@ -59,7 +59,7 @@ stages:          # List of stages for jobs, and their order of execution
 image: node:alphine
 cache: 
   paths:
-    - node_modules/
+    - todo/node_modules/
 
 
 deploy-job:      # This job runs in the deploy stage.
