@@ -30,5 +30,11 @@ This repo published to gitlab CI/CD pipeline. It does not contain acceptance tes
 
 ![Alt text](todo/screenshots/Screen%20Shot%202022-03-23%20at%2018.11.31.png "Optional Title")
 
+## Related repositories
+- Acceptance Test Repo: https://gitlab.com/furkan.moda/todo-acceptance-test 
+  Tests are pass in this repo when its runned locally but not in the pipeline because of chromium error.
+- Back-end Repo: https://gitlab.com/furkan.moda/todo-backend 
 
+## Author
+- Furkan Küçük (https://www.linkedin.com/in/furkan-k%C3%BC%C3%A7%C3%BCk-11b84b21b/)
 
