@@ -58,6 +58,7 @@ export default {
         })
         .catch((error) => console.log(error));
       //location.reload();
+      this.todoArray.push(data)
       this.textInput = "";
     },
 
