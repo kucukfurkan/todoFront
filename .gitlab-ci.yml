@@ -36,7 +36,7 @@ dockerize-job:
   services:
     - docker:dind
   script:
-    - cd todo-front
+    - cd todo
     - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
     - docker build -t furkannkck/todo-frontend:latest .
     - docker push furkannkck/todo-frontend:latest
