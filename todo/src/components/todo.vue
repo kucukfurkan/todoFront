@@ -52,7 +52,7 @@ export default {
         status: 0,
       };
       axios
-        .post("http://3.86.238.179/CreateTodo", data)
+        .post("http://3.86.238.179:8086/CreateTodo", data)
         .then(function (response) {
           console.log(response);
         })
@@ -64,7 +64,7 @@ export default {
 
     GetTodoElements() {
       axios
-        .get("http://3.86.238.179/GetTodoElements")
+        .get("http://3.86.238.179:8086/GetTodoElements")
         .then((response) => (this.todoArray = response.data))
         .catch((error) => console.log(error));
     },
