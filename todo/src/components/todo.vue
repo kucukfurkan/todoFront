@@ -64,7 +64,7 @@ export default {
 
     GetTodoElements() {
       axios
-        .get("http://127.0.0.1:8086/GetTodoElements")
+        .get("3.86.238.179/GetTodoElements")
         .then((response) => (this.todoArray = response.data))
         .catch((error) => console.log(error));
     },
