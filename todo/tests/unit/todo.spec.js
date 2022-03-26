@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 import { shallowMount, mount } from '@vue/test-utils'
 import Mainpage from '@/components/todo.vue'
-import ListElement from '@/components/ListElement.vue'
+// import ListElement from '@/components/ListElement.vue'
 import flushPromises from 'flush-promises';
 import "regenerator-runtime";
 
@@ -47,24 +48,24 @@ describe('Adding a new todo test ', () => {
     // expect(AddButton).toHaveBeenCalled();
   });
 
-  it("does not render a Child component", async () => {
-    const wrapper = mount(Mainpage)
-    //  const wrapper = shallowMount(Mainpage)
-    const inputText = "buy some milk";
-    const textInput = wrapper.find("#inputPlace");
-    await textInput.setValue(inputText);
-    for (let index = 0; index < 200; index++) {
-      await flushPromises()
-    }
-    expect(textInput.element.value).toEqual(inputText);
+  // it("does not render a Child component", async () => {
+  //   const wrapper = mount(Mainpage)
+  //   //  const wrapper = shallowMount(Mainpage)
+  //   const inputText = "buy some milk";
+  //   const textInput = wrapper.find("#inputPlace");
+  //   await textInput.setValue(inputText);
+  //   for (let index = 0; index < 200; index++) {
+  //     await flushPromises()
+  //   }
+  //   expect(textInput.element.value).toEqual(inputText);
 
-    //const AddButton = jest.fn();
-    // wrapper.setMethods({
-    //     AddTodoElement: AddButton
-    // })
-    wrapper.find('#buttonAdd').trigger('click')
+  //   //const AddButton = jest.fn();
+  //   // wrapper.setMethods({
+  //   //     AddTodoElement: AddButton
+  //   // })
+  //   wrapper.find('#buttonAdd').trigger('click')
 
-    await expect(wrapper.findComponent(ListElement).exists()).toBe(false)
-  })
+  //   await expect(wrapper.findComponent(ListElement).exists()).toBe(false)
+  // })
 
 })
