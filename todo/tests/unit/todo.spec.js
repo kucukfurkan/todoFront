@@ -64,7 +64,7 @@ describe('Adding a new todo test ', () => {
     // })
     wrapper.find('#buttonAdd').trigger('click')
 
-    await expect(wrapper.findComponent(ListElement).exists()).toBe(true)
+    await expect(wrapper.findComponent(ListElement).exists()).toBe(false)
   })
 
 })
